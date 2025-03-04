@@ -9,22 +9,18 @@ const Footer: React.FC = () => {
           <div className="footer-logo">
             <Link to="/">Hospital AI Tool</Link>
           </div>
-          <div className="footer-links">
-            <h4>Quick Links</h4>
+          <nav className="footer-nav">
             <ul>
               <li><Link to="/features">Features</Link></li>
-              <li><Link to="/how-it-works">How It Works</Link></li>
-              <li><Link to="/resources">Resources</Link></li>
+              <li><Link to="/pricing">Pricing</Link></li>
+              <li><Link to="/about">About Us</Link></li>
               <li><Link to="/contact">Contact</Link></li>
             </ul>
-          </div>
+          </nav>
           <div className="footer-social">
-            <h4>Follow Us</h4>
-            <ul>
-              <li><a href="#" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-              <li><a href="#" target="_blank" rel="noopener noreferrer">Twitter</a></li>
-              <li><a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-            </ul>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
           </div>
         </div>
         <div className="footer-bottom">

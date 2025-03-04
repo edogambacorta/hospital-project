@@ -1,0 +1,49 @@
+.home {
+  // General section styles
+  section {
+    padding: $spacing-unit * 8 0;
+
+    &:nth-child(even) {
+      background-color: $background-blue;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 $spacing-unit * 2;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      color: $text-dark;
+      margin-bottom: $spacing-unit * 4;
+      text-align: center;
+    }
+  }
+
+  // Specific section styles
+  .why-us, .our-mission, .recent-works, .our-services, .pricing, .testimonials, .team, .faq {
+    // Add specific styles for each section here
+  }
+
+  // Responsive styles
+  @media (max-width: $breakpoint-tablet) {
+    section {
+      padding: $spacing-unit * 6 0;
+
+      h2 {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    section {
+      padding: $spacing-unit * 4 0;
+
+      h2 {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}

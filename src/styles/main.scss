@@ -2,4 +2,34 @@
 @use 'mixins' as *;
 @use 'global' as *;
 
+// Layout
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/main';
+
+// Components
+@import 'components/buttons';
+@import 'components/cards';
+@import 'components/hero';
+@import 'components/why-us';
+@import 'components/our-mission';
+@import 'components/recent-works';
+@import 'components/our-services';
+@import 'components/pricing';
+@import 'components/testimonials';
+@import 'components/team';
+@import 'components/faq';
+@import 'components/features';
+@import 'components/footer';
+
+// Utilities
+@import 'utilities/animations';
+@import 'utilities/helpers';
+
 // Page styles
+@import 'pages/home';
+@import 'pages/contact';
+@import 'pages/about';
+
+// Responsive styles
+@import 'responsive';

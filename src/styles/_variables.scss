@@ -2,16 +2,14 @@
 
 // Colors
 $deep-blue: #1E3A8A;
-$teal: #14B8A6;
-$coral: #F97316;
-$light-blue: #EFF6FF;
-$light-teal: #B2F5EA;
-$light-coral: #FED7AA;
-$light-green: #DCFCE7;
+$blue: #3B82F6;
+$light-blue: #60A5FA;
+$very-light-blue: #93C5FD;
+$background-blue: #F0F9FF;
 $white: #FFFFFF;
-$light-gray: #F3F4F6;
-$medium-gray: #4B5563;
-$dark-gray: #1F2937;
+$text-dark: #1E3A8A;
+$text-medium: #3B82F6;
+$text-light: #60A5FA;
 
 // Typography
 $font-heading: 'Poppins', sans-serif;
@@ -31,16 +29,14 @@ $transition-duration: 300ms;
 
 :export {
   deepBlue: $deep-blue;
-  teal: $teal;
-  coral: $coral;
+  blue: $blue;
   lightBlue: $light-blue;
-  lightTeal: $light-teal;
-  lightCoral: $light-coral;
-  lightGreen: $light-green;
+  veryLightBlue: $very-light-blue;
+  backgroundBlue: $background-blue;
   white: $white;
-  lightGray: $light-gray;
-  mediumGray: $medium-gray;
-  darkGray: $dark-gray;
+  textDark: $text-dark;
+  textMedium: $text-medium;
+  textLight: $text-light;
   fontHeading: $font-heading;
   fontBody: $font-body;
   spacingUnit: $spacing-unit;

@@ -1,0 +1,71 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: background-color $transition-duration ease;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $spacing-unit * 2;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $white;
+    text-decoration: none;
+  }
+
+  &__nav {
+    display: flex;
+    gap: $spacing-unit * 2;
+  }
+
+  &__nav-item {
+    color: $white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color $transition-duration ease;
+
+    &:hover {
+      color: $light-blue;
+    }
+  }
+
+  &__cta {
+    background-color: $blue;
+    color: $white;
+    padding: $spacing-unit $spacing-unit * 2;
+    border-radius: $border-radius;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color $transition-duration ease;
+
+    &:hover {
+      background-color: darken($blue, 10%);
+    }
+  }
+
+  // Scrolled state
+  &.scrolled {
+    background-color: $white;
+    box-shadow: $box-shadow;
+
+    .header__logo,
+    .header__nav-item {
+      color: $text-dark;
+    }
+
+    .header__nav-item:hover {
+      color: $blue;
+    }
+  }
+}
+
+// Add JavaScript to handle scroll event and add 'scrolled' class to header

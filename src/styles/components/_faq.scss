@@ -1,0 +1,98 @@
+.faq {
+  background-color: $white;
+  padding: $spacing-unit * 10 0;
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 $spacing-unit * 2;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: $text-dark;
+    margin-bottom: $spacing-unit * 6;
+  }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-unit * 2;
+  }
+
+  .faq-item {
+    border: 1px solid $light-blue;
+    border-radius: $border-radius;
+    overflow: hidden;
+  }
+
+  .faq-question {
+    background-color: $background-blue;
+    padding: $spacing-unit * 2;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: $text-dark;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color $transition-duration ease;
+
+    &:hover {
+      background-color: darken($background-blue, 5%);
+    }
+  }
+
+  .faq-toggle {
+    font-size: 1.5rem;
+    color: $blue;
+  }
+
+  .faq-answer {
+    padding: 0 $spacing-unit * 2;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height $transition-duration ease, padding $transition-duration ease;
+  }
+
+  .faq-item.active {
+    .faq-question {
+      background-color: $blue;
+      color: $white;
+    }
+
+    .faq-toggle {
+      color: $white;
+    }
+
+    .faq-answer {
+      padding: $spacing-unit * 2;
+      max-height: 1000px;
+    }
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: $spacing-unit * 8 0;
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    .faq-question {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: $spacing-unit * 6 0;
+
+    h2 {
+      font-size: 1.8rem;
+    }
+
+    .faq-question {
+      font-size: 0.9rem;
+    }
+  }
+}
