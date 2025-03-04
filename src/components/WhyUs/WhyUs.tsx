@@ -3,26 +3,32 @@ import React from 'react';
 const WhyUs: React.FC = () => {
   const benefits = [
     {
-      title: 'Innovative Approach',
-      description: 'Our AI-driven solutions reflect a unique character and differentiate your hospital in a crowded healthcare marketplace.',
-      icon: '🚀'
+      title: 'Swiss Data Security',
+      description: 'Our AI tool adheres to strict Swiss data protection laws, ensuring the highest level of security for patient information.',
+      icon: '🔒'
     },
     {
-      title: 'Seamless Experience',
-      description: 'Enjoy a seamless user experience across all devices, ensuring every interaction enhances patient care and staff efficiency.',
-      icon: '🔄'
+      title: 'Efficiency Boost',
+      description: 'Streamline patient data management and reporting, saving time and reducing errors for healthcare professionals.',
+      icon: '⚡'
     },
     {
-      title: 'Ongoing Partnership',
-      description: "We're not just providers; we're partners who offer ongoing support and updates to keep your hospital at the forefront of AI innovation.",
-      icon: '🤝'
+      title: 'Regulatory Compliance',
+      description: 'Stay compliant with Swiss healthcare regulations through our continuously updated AI-driven system.',
+      icon: '✅'
+    },
+    {
+      title: 'Multi-language Support',
+      description: "Seamlessly operate in German, French, Italian, and English, catering to Switzerland's multilingual healthcare environment.",
+      icon: '🌐'
     }
   ];
 
   return (
     <section className="why-us">
       <div className="container">
-        <h2>Experience the Benefits of Our Expertise</h2>
+        <h2>Why Choose SwissHealthAI?</h2>
+        <p className="subtitle">Experience the future of healthcare data management in Switzerland</p>
         <div className="benefits-grid">
           {benefits.map((benefit, index) => (
             <div key={index} className="benefit-card">

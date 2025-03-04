@@ -9,42 +9,42 @@ interface Service {
 const OurServices: React.FC = () => {
   const services: Service[] = [
     {
-      title: "AI-Powered Diagnostics",
-      description: "Leverage advanced machine learning algorithms to assist in accurate and rapid disease diagnosis.",
-      icon: "🔬"
-    },
-    {
-      title: "Intelligent Patient Monitoring",
-      description: "Real-time monitoring and predictive analytics for improved patient care and early intervention.",
+      title: "Intelligent Data Extraction",
+      description: "Automatically extract and categorize patient data from various sources, reducing manual data entry and errors.",
       icon: "📊"
     },
     {
-      title: "Automated Administrative Tasks",
-      description: "Streamline hospital operations with AI-driven automation of routine administrative processes.",
-      icon: "🤖"
+      title: "Multi-lingual Processing",
+      description: "Process and analyze patient data in German, French, Italian, and English, catering to Switzerland's diverse linguistic landscape.",
+      icon: "🌐"
     },
     {
-      title: "Personalized Treatment Plans",
-      description: "Utilize AI to create tailored treatment plans based on individual patient data and medical history.",
-      icon: "📋"
+      title: "Automated Reporting",
+      description: "Generate comprehensive, customizable reports for healthcare professionals, saving time and improving decision-making.",
+      icon: "📄"
     },
     {
-      title: "Predictive Resource Management",
-      description: "Optimize resource allocation and staffing with AI-powered predictive analytics.",
-      icon: "📈"
-    },
-    {
-      title: "Secure Health Data Management",
-      description: "Ensure patient data privacy and security with advanced AI-driven encryption and access control.",
+      title: "Secure Data Integration",
+      description: "Seamlessly integrate with existing hospital systems while ensuring the highest level of data security and privacy.",
       icon: "🔒"
+    },
+    {
+      title: "Predictive Analytics",
+      description: "Utilize AI-driven predictive models to identify potential health risks and optimize patient care strategies.",
+      icon: "🔮"
+    },
+    {
+      title: "Compliance Management",
+      description: "Stay up-to-date with Swiss healthcare regulations through automated compliance checks and updates.",
+      icon: "✅"
     }
   ];
 
   return (
     <section className="our-services">
       <div className="container">
-        <h2>Expertise That Drives Quality</h2>
-        <p className="section-description">With deep expertise in AI and healthcare, we deliver quality solutions that drive success and exceed industry standards consistently.</p>
+        <h2>SwissHealthAI Features</h2>
+        <p className="section-description">Our AI-powered tool streamlines patient data management, enhancing efficiency and accuracy in Swiss healthcare institutions.</p>
         <div className="services-grid">
           {services.map((service, index) => (
             <div key={index} className="service-card">

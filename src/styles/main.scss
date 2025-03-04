@@ -22,6 +22,9 @@
 @use 'components/faq';
 @use 'components/features';
 @use 'components/footer' as component-footer;
+@use 'components/data-security';
+@use 'components/case-studies';
+@use 'components/demo';
 
 // Utilities
 @use 'utilities/animations';
@@ -31,6 +34,41 @@
 @use 'pages/home';
 @use 'pages/contact';
 @use 'pages/about';
+@use 'pages/features' as pages-features;
+@use 'pages/data-security' as pages-data-security;
+@use 'pages/case-studies' as pages-case-studies;
+@use 'pages/demo' as pages-demo;
 
 // Responsive styles
 @use 'responsive';
+
+// Global animation styles
+.page-content {
+  @extend .fade-in;
+}
+
+h1, h2, h3 {
+  @extend .slide-in;
+}
+
+.cta-button {
+  @extend .pulse;
+}
+
+// Component-specific animations
+.hero {
+  .hero-content {
+    @extend .fade-in;
+    animation-delay: 0.3s;
+  }
+}
+
+.feature-item, .case-study-card, .team-member {
+  @extend .fade-in;
+  animation-duration: 0.8s;
+}
+
+.demo-form {
+  @extend .slide-in;
+  animation-duration: 0.8s;
+}

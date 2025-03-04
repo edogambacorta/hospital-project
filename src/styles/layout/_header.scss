@@ -23,6 +23,7 @@
     font-weight: bold;
     color: $white;
     text-decoration: none;
+    animation: fadeIn 0.5s ease-in-out;
   }
 
   &__nav {
@@ -35,9 +36,32 @@
     text-decoration: none;
     font-weight: 500;
     transition: color $transition-duration ease;
+    animation: slideInFromBottom 0.5s ease-in-out;
 
     &:hover {
       color: $light-blue;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: $spacing-unit * 2;
+  }
+
+  &__language-select {
+    background-color: transparent;
+    border: 1px solid $white;
+    color: $white;
+    padding: calc($spacing-unit / 2) $spacing-unit;
+    border-radius: $border-radius;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color $transition-duration ease;
+    animation: fadeIn 0.5s ease-in-out;
+
+    &:hover {
+      background-color: rgba($white, 0.1);
     }
   }
 
@@ -49,6 +73,7 @@
     text-decoration: none;
     font-weight: 500;
     transition: background-color $transition-duration ease;
+    animation: pulse 2s infinite;
 
     &:hover {
       background-color: color.scale($blue, $lightness: -10%);
@@ -68,7 +93,68 @@
     .header__nav-item:hover {
       color: $blue;
     }
+
+    .header__language-select {
+      border-color: $text-dark;
+      color: $text-dark;
+
+      &:hover {
+        background-color: rgba($text-dark, 0.1);
+      }
+    }
   }
 }
 
-// Add JavaScript to handle scroll event and add 'scrolled' class to header
+@media (max-width: $breakpoint-tablet) {
+  .header {
+    &__nav {
+      display: none; // Hide navigation on smaller screens
+    }
+
+    &__actions {
+      gap: $spacing-unit;
+    }
+
+    &__language-select {
+      font-size: 0.8rem;
+      padding: calc($spacing-unit / 4) calc($spacing-unit / 2);
+    }
+
+    &__cta {
+      font-size: 0.9rem;
+      padding: calc($spacing-unit / 2) $spacing-unit;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromBottom {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

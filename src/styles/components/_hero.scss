@@ -32,12 +32,18 @@
     font-weight: 700;
     margin-bottom: $spacing-unit * 2;
     line-height: 1.2;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
   }
 
   &__subtitle {
     font-size: 1.5rem;
     margin-bottom: $spacing-unit * 4;
     max-width: 600px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
   }
 
   &__cta {
@@ -49,36 +55,32 @@
     text-decoration: none;
     font-weight: 500;
     font-size: 1.1rem;
-    transition: background-color $transition-duration ease;
+    transition: background-color $transition-duration ease, opacity 0.5s ease, transform 0.5s ease;
+    opacity: 0;
+    transform: translateY(20px);
 
     &:hover {
       background-color: color.scale($blue, $lightness: 10%);
     }
   }
 
-  &__featured {
-    margin-top: $spacing-unit * 8;
-    
-    p {
-      font-size: 1rem;
-      opacity: 0.8;
-      margin-bottom: $spacing-unit * 2;
-    }
+  &__features {
+    display: flex;
+    justify-content: space-between;
+    margin-top: $spacing-unit * 6;
+    gap: $spacing-unit * 2;
   }
 
-  &__logos {
+  &__feature {
     display: flex;
-    gap: $spacing-unit * 4;
     align-items: center;
+    font-size: 1rem;
+    opacity: 0.8;
 
-    img {
-      max-height: 40px;
-      opacity: 0.7;
-      transition: opacity $transition-duration ease;
-
-      &:hover {
-        opacity: 1;
-      }
+    i {
+      margin-right: $spacing-unit;
+      font-size: 1.5rem;
+      color: $blue;
     }
   }
 }
@@ -103,6 +105,11 @@
     &__subtitle {
       font-size: 1.2rem;
     }
+
+    &__features {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 }
 
@@ -118,9 +125,8 @@
       font-size: 1rem;
     }
 
-    &__logos {
-      flex-wrap: wrap;
-      justify-content: center;
+    &__feature {
+      font-size: 0.9rem;
     }
   }
 }
