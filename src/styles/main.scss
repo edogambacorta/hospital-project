@@ -3,33 +3,33 @@
 @use 'global' as *;
 
 // Layout
-@import 'layout/header';
-@import 'layout/footer';
-@import 'layout/main';
+@use 'layout/header';
+@use 'layout/footer' as layout-footer;
+@use 'layout/main';
 
 // Components
-@import 'components/buttons';
-@import 'components/cards';
-@import 'components/hero';
-@import 'components/why-us';
-@import 'components/our-mission';
-@import 'components/recent-works';
-@import 'components/our-services';
-@import 'components/pricing';
-@import 'components/testimonials';
-@import 'components/team';
-@import 'components/faq';
-@import 'components/features';
-@import 'components/footer';
+@use 'components/buttons';
+@use 'components/cards';
+@use 'components/hero';
+@use 'components/why-us';
+@use 'components/our-mission';
+@use 'components/recent-works';
+@use 'components/our-services';
+@use 'components/pricing';
+@use 'components/testimonials';
+@use 'components/team';
+@use 'components/faq';
+@use 'components/features';
+@use 'components/footer' as component-footer;
 
 // Utilities
-@import 'utilities/animations';
-@import 'utilities/helpers';
+@use 'utilities/animations';
+@use 'utilities/helpers';
 
 // Page styles
-@import 'pages/home';
-@import 'pages/contact';
-@import 'pages/about';
+@use 'pages/home';
+@use 'pages/contact';
+@use 'pages/about';
 
 // Responsive styles
-@import 'responsive';
+@use 'responsive';

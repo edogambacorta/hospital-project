@@ -1,3 +1,5 @@
+@use '../variables' as *;
+
 .recent-works {
   background-color: $background-blue;
   padding: $spacing-unit * 10 0;

@@ -1,3 +1,5 @@
+@use '../variables' as *;
+
 .team {
   background-color: $background-blue;
   padding: $spacing-unit * 10 0;

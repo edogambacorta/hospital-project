@@ -1,3 +1,5 @@
+@use '../variables' as *;
+
 .pricing {
   background-color: $background-blue;
   padding: $spacing-unit * 10 0;

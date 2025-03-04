@@ -1,3 +1,5 @@
+@use '../variables' as *;
+
 .our-services {
   background-color: $white;
   padding: $spacing-unit * 10 0;
