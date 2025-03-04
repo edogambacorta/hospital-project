@@ -1,6 +1,6 @@
 @use '../variables' as *;
 
-.our-services {
+.services {
   background-color: $background-blue;
   padding: $spacing-unit * 10 0;
 
@@ -25,13 +25,13 @@
     margin: 0 auto $spacing-unit * 6;
   }
 
-  .services-grid {
+  .services-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: $spacing-unit * 4;
   }
 
-  .service-card {
+  .service-item {
     background-color: $white;
     border-radius: $border-radius;
     padding: $spacing-unit * 4;

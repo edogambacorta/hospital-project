@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
           </div>
           <nav className="footer-nav">
             <ul>
-              <li className="slide-in"><Link to="/features">Features</Link></li>
+              <li className="slide-in"><Link to="/services">Services</Link></li>
               <li className="slide-in"><Link to="/data-security">Data Security</Link></li>
               <li className="slide-in"><Link to="/case-studies">Case Studies</Link></li>
               <li className="slide-in"><Link to="/about">About Us</Link></li>

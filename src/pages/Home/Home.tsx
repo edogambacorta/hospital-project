@@ -2,8 +2,7 @@ import React from 'react';
 import SEO from '../../components/SEO/SEO';
 import Hero from '../../components/Hero/Hero';
 import WhyUs from '../../components/WhyUs/WhyUs';
-import OurServices from '../../components/OurServices/OurServices';
-import Features from '../../components/Features/Features';
+import Services from '../../components/Services/Services';
 import DataSecurity from '../../components/DataSecurity/DataSecurity';
 import CaseStudies from '../../components/CaseStudies/CaseStudies';
 import About from '../../components/About/About';
@@ -25,8 +24,7 @@ const Home: React.FC = () => {
       <Hero id="top" />
       <WhyUs id="why-us" />
       <OurMission id="our-mission" />
-      <Features id="features" />
-      <OurServices id="our-services" />
+      <Services id="services" />
       <RecentWorks id="recent-works" />
       <DataSecurity id="data-security" />
       <CaseStudies id="case-studies" />

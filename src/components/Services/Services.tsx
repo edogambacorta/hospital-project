@@ -1,15 +1,21 @@
 import React from 'react';
 
-interface FeaturesProps {
+interface Service {
+  title: string;
+  description: string;
+  icon: string;
+}
+
+interface ServicesProps {
   id?: string;
 }
 
-const Features: React.FC<FeaturesProps> = ({ id }) => {
-  const features = [
+const Services: React.FC<ServicesProps> = ({ id }) => {
+  const services: Service[] = [
     {
       title: "Intelligent Data Extraction",
-      description: "Our AI algorithms accurately extract and categorize patient data from various sources, reducing manual data entry and errors.",
-      icon: "🧠"
+      description: "Automatically extract and categorize patient data from various sources, reducing manual data entry and errors.",
+      icon: "📊"
     },
     {
       title: "Multi-lingual Processing",
@@ -19,7 +25,7 @@ const Features: React.FC<FeaturesProps> = ({ id }) => {
     {
       title: "Automated Reporting",
       description: "Generate comprehensive, customizable reports for healthcare professionals, saving time and improving decision-making.",
-      icon: "📊"
+      icon: "📄"
     },
     {
       title: "Secure Data Integration",
@@ -29,7 +35,7 @@ const Features: React.FC<FeaturesProps> = ({ id }) => {
     {
       title: "Predictive Analytics",
       description: "Utilize AI-driven predictive models to identify potential health risks and optimize patient care strategies.",
-      icon: "📈"
+      icon: "🔮"
     },
     {
       title: "Compliance Management",
@@ -39,16 +45,16 @@ const Features: React.FC<FeaturesProps> = ({ id }) => {
   ];
 
   return (
-    <section id={id} className="features">
+    <section id={id} className="services">
       <div className="container">
-        <h2>SwissHealthAI Features</h2>
-        <p className="features-intro">Discover the powerful features of our AI-driven patient data management solution:</p>
-        <div className="features-list">
-          {features.map((feature, index) => (
-            <div key={index} className="feature-item">
-              <div className="feature-icon">{feature.icon}</div>
-              <h3>{feature.title}</h3>
-              <p>{feature.description}</p>
+        <h2>SwissHealthAI Services</h2>
+        <p className="section-description">Our AI-powered services streamline patient data management, enhancing efficiency and accuracy in Swiss healthcare institutions.</p>
+        <div className="services-list">
+          {services.map((service, index) => (
+            <div key={index} className="service-item">
+              <div className="service-icon">{service.icon}</div>
+              <h3>{service.title}</h3>
+              <p>{service.description}</p>
             </div>
           ))}
         </div>
@@ -57,4 +63,4 @@ const Features: React.FC<FeaturesProps> = ({ id }) => {
   );
 };
 
-export default Features;
+export default Services;

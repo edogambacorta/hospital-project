@@ -32,8 +32,7 @@ const Header: React.FC = () => {
         <nav className="header__nav">
           <HashLink to="#why-us" className="header__nav-item slide-in">Why Us</HashLink>
           <HashLink to="#our-mission" className="header__nav-item slide-in">Our Mission</HashLink>
-          <HashLink to="#features" className="header__nav-item slide-in">Features</HashLink>
-          <HashLink to="#our-services" className="header__nav-item slide-in">Services</HashLink>
+          <HashLink to="#services" className="header__nav-item slide-in">Services</HashLink>
           <HashLink to="#data-security" className="header__nav-item slide-in">Data Security</HashLink>
           <HashLink to="#case-studies" className="header__nav-item slide-in">Case Studies</HashLink>
           <HashLink to="#about" className="header__nav-item slide-in">About Us</HashLink>
