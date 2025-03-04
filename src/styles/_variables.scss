@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 // Colors
 $deep-blue: #1E3A8A;
 $teal: #14B8A6;
@@ -26,3 +28,25 @@ $breakpoint-tablet: 1024px;
 $border-radius: 4px;
 $box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 $transition-duration: 300ms;
+
+:export {
+  deepBlue: $deep-blue;
+  teal: $teal;
+  coral: $coral;
+  lightBlue: $light-blue;
+  lightTeal: $light-teal;
+  lightCoral: $light-coral;
+  lightGreen: $light-green;
+  white: $white;
+  lightGray: $light-gray;
+  mediumGray: $medium-gray;
+  darkGray: $dark-gray;
+  fontHeading: $font-heading;
+  fontBody: $font-body;
+  spacingUnit: $spacing-unit;
+  breakpointMobile: $breakpoint-mobile;
+  breakpointTablet: $breakpoint-tablet;
+  borderRadius: $border-radius;
+  boxShadow: $box-shadow;
+  transitionDuration: $transition-duration;
+}

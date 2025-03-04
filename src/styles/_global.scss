@@ -1,3 +1,6 @@
+@use 'variables' as *;
+@use 'sass:color';
+
 html {
   font-size: 16px;
   box-sizing: border-box;
@@ -25,7 +28,7 @@ a {
   transition: color $transition-duration ease;
 
   &:hover {
-    color: darken($teal, 10%);
+    color: color.scale($teal, $lightness: -10%);
   }
 }
 
@@ -52,7 +55,7 @@ a {
     color: $white;
 
     &:hover {
-      background-color: darken($coral, 10%);
+      background-color: color.scale($coral, $lightness: -10%);
     }
   }
 
