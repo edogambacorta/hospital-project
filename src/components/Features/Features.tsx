@@ -1,7 +1,10 @@
 import React from 'react';
-import SEO from '../../components/SEO/SEO';
 
-const Features: React.FC = () => {
+interface FeaturesProps {
+  id?: string;
+}
+
+const Features: React.FC<FeaturesProps> = ({ id }) => {
   const features = [
     {
       title: "Intelligent Data Extraction",
@@ -36,13 +39,9 @@ const Features: React.FC = () => {
   ];
 
   return (
-    <div className="features-page">
-      <SEO 
-        title="Features"
-        description="Explore the powerful features of SwissHealthAI's AI-driven patient data management solution. From intelligent data extraction to predictive analytics, discover how we're revolutionizing healthcare."
-      />
+    <section id={id} className="features">
       <div className="container">
-        <h1>SwissHealthAI Features</h1>
+        <h2>SwissHealthAI Features</h2>
         <p className="features-intro">Discover the powerful features of our AI-driven patient data management solution:</p>
         <div className="features-list">
           {features.map((feature, index) => (
@@ -54,7 +53,7 @@ const Features: React.FC = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

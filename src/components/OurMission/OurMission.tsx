@@ -1,9 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const OurMission: React.FC = () => {
+interface OurMissionProps {
+  id?: string;
+}
+
+const OurMission: React.FC<OurMissionProps> = ({ id }) => {
   return (
-    <section className="our-mission">
+    <section id={id} className="our-mission">
       <div className="container">
         <h2>Our Mission</h2>
         <div className="mission-content">

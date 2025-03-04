@@ -1,8 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import SEO from '../../components/SEO/SEO';
 
-const CaseStudies: React.FC = () => {
+interface CaseStudiesProps {
+  id?: string;
+}
+
+const CaseStudies: React.FC<CaseStudiesProps> = ({ id }) => {
   const caseStudies = [
     {
       id: 1,
@@ -28,13 +30,9 @@ const CaseStudies: React.FC = () => {
   ];
 
   return (
-    <div className="case-studies-page">
-      <SEO 
-        title="Case Studies"
-        description="Explore real-world examples of how SwissHealthAI has transformed patient data management for healthcare institutions across Switzerland. Learn about our success stories and the impact of our AI-driven solutions."
-      />
+    <section id={id} className="case-studies">
       <div className="container">
-        <h1>Case Studies</h1>
+        <h2>Case Studies</h2>
         <p className="case-studies-intro">Discover how SwissHealthAI has transformed patient data management for healthcare institutions across Switzerland.</p>
         <div className="case-studies-grid">
           {caseStudies.map((study) => (
@@ -48,13 +46,12 @@ const CaseStudies: React.FC = () => {
                     <li key={index}>{result}</li>
                   ))}
                 </ul>
-                <Link to={`/case-study/${study.id}`} className="read-more">Read More</Link>
               </div>
             </div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

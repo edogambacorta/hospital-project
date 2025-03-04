@@ -1,7 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
-const Hero: React.FC = () => {
+interface HeroProps {
+  id?: string;
+}
+
+const Hero: React.FC<HeroProps> = ({ id }) => {
   const heroRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
@@ -30,7 +34,7 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <section ref={heroRef} className="hero">
+    <section ref={heroRef} id={id} className="hero">
       <div className="hero__container">
         <h1 ref={titleRef} className="hero__title">
           <span className="hero__title-line">AI Powered</span>

@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
-import SEO from '../../components/SEO/SEO';
 
-const Demo: React.FC = () => {
+interface DemoProps {
+  id?: string;
+}
+
+const Demo: React.FC<DemoProps> = ({ id }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -69,7 +72,7 @@ const Demo: React.FC = () => {
     return isValid;
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prevState => ({
       ...prevState,
@@ -92,24 +95,13 @@ const Demo: React.FC = () => {
         phoneNumber: '',
         message: ''
       });
-      setErrors({
-        name: '',
-        email: '',
-        organization: '',
-        jobTitle: '',
-        phoneNumber: '',
-      });
     }
   };
 
   return (
-    <div className="demo-page">
-      <SEO 
-        title="Request a Demo"
-        description="Experience the power of SwissHealthAI firsthand. Schedule a personalized demo of our AI-powered patient data management solution and see how we can transform your healthcare institution."
-      />
+    <section id={id} className="demo">
       <div className="container">
-        <h1>Request a Demo</h1>
+        <h2>Request a Demo</h2>
         <p className="demo-intro">Experience the power of SwissHealthAI firsthand. Fill out the form below to schedule a personalized demo of our AI-powered patient data management solution.</p>
         <form className="demo-form" onSubmit={handleSubmit}>
           <div className="form-group">
@@ -184,7 +176,7 @@ const Demo: React.FC = () => {
           <button type="submit" className="submit-button">Request Demo</button>
         </form>
       </div>
-    </div>
+    </section>
   );
 };
 

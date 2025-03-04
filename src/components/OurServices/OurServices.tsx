@@ -6,7 +6,11 @@ interface Service {
   icon: string;
 }
 
-const OurServices: React.FC = () => {
+interface OurServicesProps {
+  id?: string;
+}
+
+const OurServices: React.FC<OurServicesProps> = ({ id }) => {
   const services: Service[] = [
     {
       title: "Intelligent Data Extraction",
@@ -41,7 +45,7 @@ const OurServices: React.FC = () => {
   ];
 
   return (
-    <section className="our-services">
+    <section id={id} className="our-services">
       <div className="container">
         <h2>SwissHealthAI Features</h2>
         <p className="section-description">Our AI-powered tool streamlines patient data management, enhancing efficiency and accuracy in Swiss healthcare institutions.</p>

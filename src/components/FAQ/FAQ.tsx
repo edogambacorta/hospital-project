@@ -5,7 +5,11 @@ interface FAQItem {
   answer: string;
 }
 
-const FAQ: React.FC = () => {
+interface FAQProps {
+  id?: string;
+}
+
+const FAQ: React.FC<FAQProps> = ({ id }) => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const faqItems: FAQItem[] = [
@@ -40,7 +44,7 @@ const FAQ: React.FC = () => {
   };
 
   return (
-    <section className="faq">
+    <section id={id} className="faq">
       <div className="container">
         <h2>Frequently Asked Questions</h2>
         <div className="faq-list">

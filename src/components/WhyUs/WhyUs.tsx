@@ -1,6 +1,10 @@
 import React from 'react';
 
-const WhyUs: React.FC = () => {
+interface WhyUsProps {
+  id?: string;
+}
+
+const WhyUs: React.FC<WhyUsProps> = ({ id }) => {
   const benefits = [
     {
       title: 'Swiss Data Security',
@@ -25,7 +29,7 @@ const WhyUs: React.FC = () => {
   ];
 
   return (
-    <section className="why-us">
+    <section id={id} className="why-us">
       <div className="container">
         <h2>Why Choose SwissHealthAI?</h2>
         <p className="subtitle">Experience the future of healthcare data management in Switzerland</p>

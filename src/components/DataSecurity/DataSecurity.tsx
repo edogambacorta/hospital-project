@@ -1,7 +1,10 @@
 import React from 'react';
-import SEO from '../../components/SEO/SEO';
 
-const DataSecurity: React.FC = () => {
+interface DataSecurityProps {
+  id?: string;
+}
+
+const DataSecurity: React.FC<DataSecurityProps> = ({ id }) => {
   const securityFeatures = [
     {
       icon: '🔒',
@@ -26,13 +29,9 @@ const DataSecurity: React.FC = () => {
   ];
 
   return (
-    <div className="data-security-page">
-      <SEO 
-        title="Data Security"
-        description="Learn about SwissHealthAI's robust data security measures. We prioritize the protection of your sensitive healthcare information with end-to-end encryption, Swiss data centers, and regular security audits."
-      />
+    <section id={id} className="data-security">
       <div className="container">
-        <h1>Data Security</h1>
+        <h2>Data Security</h2>
         <p className="security-intro">At SwissHealthAI, we prioritize the security and privacy of your data. Our robust security measures and compliance with Swiss data protection laws ensure that your sensitive healthcare information is always protected.</p>
         <div className="security-features">
           {securityFeatures.map((feature, index) => (
@@ -44,7 +43,7 @@ const DataSecurity: React.FC = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

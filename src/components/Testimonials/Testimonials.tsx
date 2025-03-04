@@ -8,7 +8,11 @@ interface Testimonial {
   image: string;
 }
 
-const Testimonials: React.FC = () => {
+interface TestimonialsProps {
+  id?: string;
+}
+
+const Testimonials: React.FC<TestimonialsProps> = ({ id }) => {
   const testimonials: Testimonial[] = [
     {
       quote: "The AI-powered diagnostics have significantly improved our accuracy and reduced time-to-diagnosis. It's been a game-changer for our hospital.",
@@ -34,7 +38,7 @@ const Testimonials: React.FC = () => {
   ];
 
   return (
-    <section className="testimonials">
+    <section id={id} className="testimonials">
       <div className="container">
         <h2>Trusted by Hospitals Like Yours</h2>
         <div className="testimonials-grid">

@@ -7,7 +7,11 @@ interface TeamMember {
   image: string;
 }
 
-const Team: React.FC = () => {
+interface TeamProps {
+  id?: string;
+}
+
+const Team: React.FC<TeamProps> = ({ id }) => {
   const teamMembers: TeamMember[] = [
     {
       name: "Dr. Alexandra Foster",
@@ -36,7 +40,7 @@ const Team: React.FC = () => {
   ];
 
   return (
-    <section className="team">
+    <section id={id} className="team">
       <div className="container">
         <h2>The People Behind the Magic</h2>
         <p className="section-description">Meet our team of experts dedicated to revolutionizing hospital management through AI.</p>

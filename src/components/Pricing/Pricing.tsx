@@ -9,7 +9,11 @@ interface PricingPlan {
   isPopular?: boolean;
 }
 
-const Pricing: React.FC = () => {
+interface PricingProps {
+  id?: string;
+}
+
+const Pricing: React.FC<PricingProps> = ({ id }) => {
   const plans: PricingPlan[] = [
     {
       name: "Standard",
@@ -50,7 +54,7 @@ const Pricing: React.FC = () => {
   ];
 
   return (
-    <section className="pricing">
+    <section id={id} className="pricing">
       <div className="container">
         <h2>Transparent Pricing Plans</h2>
         <p className="section-description">Choose the perfect plan for your hospital's needs. All plans include a 30-day free trial.</p>

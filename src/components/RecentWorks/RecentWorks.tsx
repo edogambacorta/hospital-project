@@ -7,7 +7,11 @@ interface Work {
   impact: string;
 }
 
-const RecentWorks: React.FC = () => {
+interface RecentWorksProps {
+  id?: string;
+}
+
+const RecentWorks: React.FC<RecentWorksProps> = ({ id }) => {
   const works: Work[] = [
     {
       title: "AI-Powered Patient Triage",
@@ -30,7 +34,7 @@ const RecentWorks: React.FC = () => {
   ];
 
   return (
-    <section className="recent-works">
+    <section id={id} className="recent-works">
       <div className="container">
         <h2>Recent Works, Notable Impact</h2>
         <div className="works-grid">
