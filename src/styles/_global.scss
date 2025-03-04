@@ -1,0 +1,69 @@
+html {
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: $font-body;
+  line-height: 1.5;
+  color: $dark-gray;
+  background-color: $white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-heading;
+  color: $deep-blue;
+}
+
+a {
+  color: $teal;
+  text-decoration: none;
+  transition: color $transition-duration ease;
+
+  &:hover {
+    color: darken($teal, 10%);
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing-unit * 2;
+}
+
+.btn {
+  display: inline-block;
+  padding: $spacing-unit * 1.5 $spacing-unit * 3;
+  border-radius: $border-radius;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color $transition-duration ease, transform $transition-duration ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  &-primary {
+    background-color: $coral;
+    color: $white;
+
+    &:hover {
+      background-color: darken($coral, 10%);
+    }
+  }
+
+  &-secondary {
+    background-color: transparent;
+    border: 2px solid $teal;
+    color: $teal;
+
+    &:hover {
+      background-color: $teal;
+      color: $white;
+    }
+  }
+}

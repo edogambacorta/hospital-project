@@ -1,0 +1,14 @@
+@import './variables';
+@import './mixins';
+@import './global';
+
+// Component styles
+@import '../components/Header/Header';
+@import '../components/Footer/Footer';
+
+// Page styles
+@import '../pages/Home/Home';
+@import '../pages/Features/Features';
+@import '../pages/HowItWorks/HowItWorks';
+@import '../pages/Resources/Resources';
+@import '../pages/Contact/Contact';
