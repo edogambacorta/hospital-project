@@ -1,14 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 const Hero: React.FC = () => {
   const heroRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
-  const scrollRef = useRef<HTMLAnchorElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -22,7 +19,7 @@ const Hero: React.FC = () => {
       { threshold: 0.1 }
     );
 
-    const elements = [titleRef, subtitleRef, ctaRef, scrollRef];
+    const elements = [titleRef, subtitleRef, ctaRef];
     elements.forEach((ref) => {
       if (ref.current) {
         observer.observe(ref.current);
@@ -36,8 +33,9 @@ const Hero: React.FC = () => {
     <section ref={heroRef} className="hero">
       <div className="hero__container">
         <h1 ref={titleRef} className="hero__title">
-          <span className="hero__title-main">AI-Powered Patient Data Management</span>
-          <span className="hero__title-sub">Beyond<span className="highlight">✦</span>Limits</span>
+          <span className="hero__title-line">AI Powered</span>
+          <span className="hero__title-line">Beyond<span className="highlight">✦</span>Limits</span>
+          <span className="hero__title-line">Patient Reporting</span>
         </h1>
         <p ref={subtitleRef} className="hero__subtitle">
           Healthcare services at your fingertips, Pause or cancel anytime.
@@ -51,10 +49,6 @@ const Hero: React.FC = () => {
             {/* Add your hospital or healthcare logos here */}
           </div>
         </div>
-        <a ref={scrollRef} href="#why-us" className="hero__scroll-down">
-          <span>Scroll Down</span>
-          <FontAwesomeIcon icon={faChevronDown} />
-        </a>
       </div>
     </section>
   );

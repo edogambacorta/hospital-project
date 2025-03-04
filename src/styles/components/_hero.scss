@@ -32,23 +32,26 @@
   }
 
   &__title {
-    font-size: 4.5rem;
+    font-size: 4rem;
     font-weight: 700;
-    margin-bottom: $spacing-unit * 2;
-    line-height: 1.1;
+    margin-bottom: $spacing-unit * 3;
+    line-height: 1.2;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
 
-    &-main {
+    &-line {
       display: block;
       color: $white;
-    }
+      margin-bottom: $spacing-unit * 0.75;
 
-    &-sub {
-      display: block;
-      font-size: 3.5rem;
-      color: $blue;
+      &:nth-child(2) {
+        color: $blue;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
 
     .highlight {
@@ -78,7 +81,7 @@
 
   &__cta {
     display: inline-block;
-    padding: $spacing-unit * 2 $spacing-unit * 4;
+    padding: $spacing-unit * 1.5 $spacing-unit * 3;
     border-radius: $border-radius;
     text-decoration: none;
     font-weight: 500;
@@ -123,30 +126,6 @@
       }
     }
   }
-
-  &__scroll-down {
-    position: absolute;
-    bottom: $spacing-unit * 4;
-    left: 50%;
-    transform: translateX(-50%);
-    color: $white;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 1rem;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-
-    span {
-      margin-bottom: $spacing-unit;
-    }
-
-    svg {
-      font-size: 1.8rem;
-      animation: bounce 2s infinite;
-    }
-  }
 }
 
 .animate {
@@ -163,26 +142,10 @@
   }
 }
 
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-10px);
-  }
-  60% {
-    transform: translateY(-5px);
-  }
-}
-
 @media (max-width: $breakpoint-tablet) {
   .hero {
     &__title {
       font-size: 3.5rem;
-
-      &-sub {
-        font-size: 3rem;
-      }
     }
 
     &__subtitle {
@@ -195,10 +158,6 @@
   .hero {
     &__title {
       font-size: 2.8rem;
-
-      &-sub {
-        font-size: 2.3rem;
-      }
     }
 
     &__subtitle {

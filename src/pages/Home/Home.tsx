@@ -4,7 +4,6 @@ import Hero from '../../components/Hero/Hero';
 import WhyUs from '../../components/WhyUs/WhyUs';
 import OurServices from '../../components/OurServices/OurServices';
 import FAQ from '../../components/FAQ/FAQ';
-import Footer from '../../components/Footer/Footer';
 
 const Home: React.FC = () => {
   return (
@@ -17,7 +16,6 @@ const Home: React.FC = () => {
       <WhyUs />
       <OurServices />
       <FAQ />
-      <Footer />
     </div>
   );
 };
