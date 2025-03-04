@@ -1,4 +1,5 @@
 @use '../variables' as *;
+@use 'sass:color';
 
 .header {
   position: fixed;
@@ -50,7 +51,7 @@
     transition: background-color $transition-duration ease;
 
     &:hover {
-      background-color: darken($blue, 10%);
+      background-color: color.scale($blue, $lightness: -10%);
     }
   }
 
